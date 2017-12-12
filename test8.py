@@ -20,11 +20,11 @@ rand(n)是在[0.0,1.0]区间，产生均匀分布的n*n随机矩阵。
 np.random.seed(1)
 data = np.random.randn(2,100)
 
-fig,axs = plt.subplots(2,2,figsize=(5,5))
-axs[0,0].hist(data[0])           #直方图
+fig,axs = plt.subplots(2,2,figsize=(5,5))#绘制两行两列  figsize是画布的大小
+axs[0,0].hist(data[0])           #直方图    在第一个 也就是第一行第一列
 axs[1,0].scatter(data[0],data[1])#散点图
 axs[0,1].plot(data[0],data[1])   #线
 axs[1,1].hist2d(data[0],data[1]) #双变量直方图
 
-fig.subplots_adjust(hspace = 0.8)
+fig.subplots_adjust(hspace = 0.8) #子图的垂直间距
 plt.show()
